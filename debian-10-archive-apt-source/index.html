@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <title>Debian 10 更换 apt 归档源 | BYTEDREAM BLOG</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="robots" content="noodp"/>
+
+    <link rel="stylesheet" href="https://www.bytedream.org/style.css">
+    <link rel="stylesheet" href="https://www.bytedream.org/color/blue-auto.css">
+
+        <link rel="stylesheet" href="https://www.bytedream.org/color/background_auto.css">
+    
+    <link rel="stylesheet" href="https://www.bytedream.org/font-hack-subset.css">
+
+    <meta name="description" content="Debian 10（Buster）在 2024 年 6 月停止维护。继续使用时，`apt update` 会报错，要将源切换至归档源才能继续使用。">
+
+    <meta property="og:description" content="Debian 10（Buster）在 2024 年 6 月停止维护。继续使用时，`apt update` 会报错，要将源切换至归档源才能继续使用。">
+    <meta property="og:title" content="Debian 10 更换 apt 归档源 | BYTEDREAM BLOG">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.bytedream.org/debian-10-archive-apt-source/">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="Debian 10（Buster）在 2024 年 6 月停止维护。继续使用时，`apt update` 会报错，要将源切换至归档源才能继续使用。">
+    <meta name="twitter:title" content="Debian 10 更换 apt 归档源 | BYTEDREAM BLOG">
+    <meta property="twitter:domain" content="www.bytedream.org">
+    <meta property="twitter:url" content="https://www.bytedream.org/debian-10-archive-apt-source/">
+
+                <link rel="alternate" type="application/rss+xml" title="BYTEDREAM BLOG RSS Feed" href="https://www.bytedream.org/rss.xml" />
+                <link rel="alternate" type="application/atom+xml" title="BYTEDREAM BLOG Atom Feed" href="https://www.bytedream.org/atom.xml" />
+        <link rel="shortcut icon" type="image/svg+xml" href="/favicon.svg">
+    
+    </head>
+
+<body class="">
+<div class="container">
+    
+    <header class="header">
+        <div class="header__inner">
+            <div class="header__logo">
+                    
+                <a href="https://www.bytedream.org" style="text-decoration: none;">
+                    <div class="logo">
+                      
+                            BYTEDREAM BLOG
+                        
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        
+        
+                <nav class="menu">
+            <ul class="menu__inner">
+                <li class="active"><a href="https://www.bytedream.org">博客</a></li>
+            
+                <li><a href="https://www.bytedream.org/categories">分类</a></li>
+            
+                <li><a href="https://www.bytedream.org/tags">标签</a></li>
+            
+                <li><a href="https://www.bytedream.org/archive">归档</a></li>
+            
+                <li><a href="https://www.bytedream.org/rss">订阅</a></li>
+            
+                <li><a href="https://www.bytedream.org/about">关于</a></li>
+            </ul>
+        </nav>
+    
+    
+        
+    </header>
+    
+
+    <div class="content">
+        
+    <div class="post">
+        
+    <h1 class="post-title"><a href="https://www.bytedream.org/debian-10-archive-apt-source/"><span class="title-text">Debian 10 更换 apt 归档源</span></a></h1>
+    <div class="post-meta-inline">
+        
+    <span class="post-date">
+            2026-03-31
+        </span>
+
+    </div>
+        
+        <span class="post-tags-inline">
+                :: tags:&nbsp;
+                <a class="post-tag" href="https://www.bytedream.org/tags/debian/">#Debian</a></span>
+    
+    
+        
+        <div class="post-content">
+            <p>Debian 10（Buster）在 2024 年 6 月停止维护。继续使用时，<code>apt update</code> 会报错，要将源切换至归档源才能继续使用。</p>
+<blockquote>
+<p><strong>需要注意</strong>：Debian 10 已无安全更新，建议升级至 Debian 11/12。</p>
+</blockquote>
+<h2 id="cao-zuo-bu-zou">操作步骤</h2>
+<h3 id="1-bei-fen-yuan-you-yuan-lie-biao">1. 备份原有源列表</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">cp</span><span style="color: #F1FA8C;"> /etc/apt/sources.list /etc/apt/sources.list.bak</span></span></code></pre><h3 id="2-bian-ji-yuan-lie-biao">2. 编辑源列表</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">nano</span><span style="color: #F1FA8C;"> /etc/apt/sources.list</span></span></code></pre>
+<p>删除原来的内容，换成归档源：</p>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="plain"><span class="giallo-l"><span>deb http://archive.debian.org/debian/ buster main contrib non-free</span></span>
+<span class="giallo-l"><span>deb http://archive.debian.org/debian/ buster-updates main contrib non-free</span></span>
+<span class="giallo-l"><span>deb http://archive.debian.org/debian-security buster/updates main contrib non-free</span></span></code></pre>
+<p>保存退出：<code>Ctrl + O</code> 保存，回车确认，<code>Ctrl + X</code> 退出。</p>
+<h3 id="3-geng-xin-ruan-jian-lie-biao">3. 更新软件列表</h3>
+<pre class="giallo" style="color: #F8F8F2; background-color: #282A36;"><code data-lang="shellscript"><span class="giallo-l"><span style="color: #50FA7B;">apt</span><span style="color: #F1FA8C;"> update</span><span style="color: #BD93F9;"> -o</span><span style="color: #F1FA8C;"> Acquire::Check-Valid-Until=</span><span style="color: #BD93F9;">false</span></span></code></pre>
+<p>归档的源没有 <code>Valid-Until</code> 标记，得加 <code>-o Acquire::Check-Valid-Until=false</code> 参数，不然会报错。</p>
+
+        </div>
+
+        
+    </div>
+
+    </div>
+
+    
+    <footer class="footer">
+        <div class="footer__inner">
+                <div class="copyright">
+                    <span>© 
+    2026
+ BYTEDREAM.ORG</span>
+                    <span class="running-time" id="running-time"></span>
+                </div>
+            </div>
+    </footer>
+    
+
+</div>
+<script>
+(function() {
+    var start = new Date('2026-06-23T00:00:00');
+    var el = document.getElementById('running-time');
+    function tick() {
+        var diff = Date.now() - start;
+        var d = Math.floor(diff / 864e5);
+        var h = Math.floor((diff % 864e5) / 36e5);
+        var m = Math.floor((diff % 36e5) / 6e4);
+        var s = Math.floor((diff % 6e4) / 1e3);
+        el.textContent = '\u5df2\u8fd0\u884c ' + d + ' \u5929 ' + h + ' \u5c0f\u65f6 ' + m + ' \u5206 ' + s + ' \u79d2';
+    }
+    if (el) { tick(); setInterval(tick, 1000); }
+})();
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.on-list .post-content').forEach(function(el) {
+        var text = el.textContent.trim();
+        if (text.length > 100) {
+            el.textContent = text.substring(0, 100) + '...';
+        }
+    });
+});
+</script>
+</body>
+
+</html>

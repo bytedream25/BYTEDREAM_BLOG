@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://www.bytedream.org/</loc>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/about/</loc>
+        <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/archive/</loc>
+        <lastmod>2026-06-23</lastmod>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/categories/</loc>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/categories/xin-xi-ji-shu/</loc>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/debian-10-archive-apt-source/</loc>
+        <lastmod>2026-03-31</lastmod>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/page/1/</loc>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/rss/</loc>
+        <lastmod>2026-06-24</lastmod>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/tags/</loc>
+    </url>
+    <url>
+        <loc>https://www.bytedream.org/tags/debian/</loc>
+    </url>
+</urlset>

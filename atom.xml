@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh">
+    <title>BYTEDREAM BLOG</title>
+    <subtitle>记录技术探索、生活感悟和一切有趣的想法。</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://www.bytedream.org/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://www.bytedream.org"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2026-06-24T00:00:00+00:00</updated>
+    <id>https://www.bytedream.org/atom.xml</id>
+    <entry xml:lang="zh">
+        <title>RSS 订阅</title>
+        <published>2026-06-24T00:00:00+00:00</published>
+        <updated>2026-06-24T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://www.bytedream.org/rss/"/>
+        <id>https://www.bytedream.org/rss/</id>
+        
+        <content type="html" xml:base="https://www.bytedream.org/rss/">&lt;h2 id=&quot;rss-shi-shen-me&quot;&gt;RSS 是什么？&lt;&#x2F;h2&gt;
+&lt;p&gt;RSS（Really Simple Syndication）是一种内容聚合技术，你可以通过 RSS 阅读器订阅博客更新，无需手动访问网站。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;ru-he-ding-yue&quot;&gt;如何订阅？&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;di-yi-bu-gen-ju-ni-de-she-bei-xuan-ze-yue-du-qi&quot;&gt;第一步：根据你的设备选择阅读器&lt;&#x2F;h3&gt;
+&lt;p&gt;在搜索引擎中检索适用于你当前平台的阅读器。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;di-er-bu-tian-jia-ding-yue-yuan&quot;&gt;第二步：添加订阅源&lt;&#x2F;h3&gt;
+&lt;p&gt;点击下方按钮复制订阅地址，在 RSS 阅读器中添加即可。&lt;&#x2F;p&gt;
+&lt;button onclick=&quot;var i=document.createElement(&#x27;input&#x27;);i.value=window.location.origin+&#x27;&#x2F;rss.xml&#x27;;document.body.appendChild(i);i.select();document.execCommand(&#x27;copy&#x27;);i.remove();this.textContent=&#x27;✓ 已复制&#x27;;setTimeout(()=&gt;this.textContent=&#x27;点击复制 RSS 地址&#x27;,2000)&quot; style=&quot;font-size:1rem;padding:8px 18px;border:1px solid var(--accent);background:none;color:var(--accent);cursor:pointer;border-radius:4px;margin:10px 0;&quot;&gt;
+  点击复制 RSS 地址
+&lt;&#x2F;button&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>关于</title>
+        <published>2026-06-23T00:00:00+00:00</published>
+        <updated>2026-06-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://www.bytedream.org/about/"/>
+        <id>https://www.bytedream.org/about/</id>
+        
+        <content type="html" xml:base="https://www.bytedream.org/about/">&lt;h2 id=&quot;wave-huan-ying&quot;&gt;👋 欢迎&lt;&#x2F;h2&gt;
+&lt;p&gt;这里是 BYTEDREAM.ORG，佚（史莱姆）的个人博客。&lt;&#x2F;p&gt;
+&lt;p&gt;记录技术探索、生活感悟和一切有趣的想法。&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tools-guan-yu-ben-zhan&quot;&gt;🛠 关于本站&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;框架：&lt;a rel=&quot;external&quot; href=&quot;https:&#x2F;&#x2F;www.getzola.org&#x2F;&quot;&gt;Zola&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;主题：Terminimal&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;mailbox-with-mail-lian-xi&quot;&gt;📬 联系&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;邮箱：2097876365@qq.com&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>归档</title>
+        <published>2026-06-23T00:00:00+00:00</published>
+        <updated>2026-06-23T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://www.bytedream.org/archive/"/>
+        <id>https://www.bytedream.org/archive/</id>
+        
+        <content type="html" xml:base="https://www.bytedream.org/archive/"></content>
+        
+    </entry>
+    <entry xml:lang="zh">
+        <title>Debian 10 更换 apt 归档源</title>
+        <published>2026-03-31T00:00:00+00:00</published>
+        <updated>2026-03-31T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://www.bytedream.org/debian-10-archive-apt-source/"/>
+        <id>https://www.bytedream.org/debian-10-archive-apt-source/</id>
+        
+        <content type="html" xml:base="https://www.bytedream.org/debian-10-archive-apt-source/">&lt;p&gt;Debian 10（Buster）在 2024 年 6 月停止维护。继续使用时，&lt;code&gt;apt update&lt;&#x2F;code&gt; 会报错，要将源切换至归档源才能继续使用。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;需要注意&lt;&#x2F;strong&gt;：Debian 10 已无安全更新，建议升级至 Debian 11&#x2F;12。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;cao-zuo-bu-zou&quot;&gt;操作步骤&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-bei-fen-yuan-you-yuan-lie-biao&quot;&gt;1. 备份原有源列表&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;2-bian-ji-yuan-lie-biao&quot;&gt;2. 编辑源列表&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;nano&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;删除原来的内容，换成归档源：&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;deb http:&#x2F;&#x2F;archive.debian.org&#x2F;debian&#x2F; buster main contrib non-free&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;deb http:&#x2F;&#x2F;archive.debian.org&#x2F;debian&#x2F; buster-updates main contrib non-free&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;deb http:&#x2F;&#x2F;archive.debian.org&#x2F;debian-security buster&#x2F;updates main contrib non-free&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;保存退出：&lt;code&gt;Ctrl + O&lt;&#x2F;code&gt; 保存，回车确认，&lt;code&gt;Ctrl + X&lt;&#x2F;code&gt; 退出。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;3-geng-xin-ruan-jian-lie-biao&quot;&gt;3. 更新软件列表&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; update&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Acquire::Check-Valid-Until=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;归档的源没有 &lt;code&gt;Valid-Until&lt;&#x2F;code&gt; 标记，得加 &lt;code&gt;-o Acquire::Check-Valid-Until=false&lt;&#x2F;code&gt; 参数，不然会报错。&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

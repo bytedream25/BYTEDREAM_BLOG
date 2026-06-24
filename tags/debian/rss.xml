@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>BYTEDREAM BLOG - Debian</title>
+      <link>https://www.bytedream.org</link>
+      <description>记录技术探索、生活感悟和一切有趣的想法。</description>
+      <generator>Zola</generator>
+      <language>zh</language>
+      <atom:link href="https://www.bytedream.org/tags/debian/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 31 Mar 2026 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Debian 10 更换 apt 归档源</title>
+          <pubDate>Tue, 31 Mar 2026 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://www.bytedream.org/debian-10-archive-apt-source/</link>
+          <guid>https://www.bytedream.org/debian-10-archive-apt-source/</guid>
+          <description xml:base="https://www.bytedream.org/debian-10-archive-apt-source/">&lt;p&gt;Debian 10（Buster）在 2024 年 6 月停止维护。继续使用时，&lt;code&gt;apt update&lt;&#x2F;code&gt; 会报错，要将源切换至归档源才能继续使用。&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;需要注意&lt;&#x2F;strong&gt;：Debian 10 已无安全更新，建议升级至 Debian 11&#x2F;12。&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;h2 id=&quot;cao-zuo-bu-zou&quot;&gt;操作步骤&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-bei-fen-yuan-you-yuan-lie-biao&quot;&gt;1. 备份原有源列表&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;cp&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list &#x2F;etc&#x2F;apt&#x2F;sources.list.bak&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;&lt;h3 id=&quot;2-bian-ji-yuan-lie-biao&quot;&gt;2. 编辑源列表&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;nano&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;删除原来的内容，换成归档源：&lt;&#x2F;p&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;plain&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;deb http:&#x2F;&#x2F;archive.debian.org&#x2F;debian&#x2F; buster main contrib non-free&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;deb http:&#x2F;&#x2F;archive.debian.org&#x2F;debian&#x2F; buster-updates main contrib non-free&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;
+&lt;span class=&quot;giallo-l&quot;&gt;&lt;span&gt;deb http:&#x2F;&#x2F;archive.debian.org&#x2F;debian-security buster&#x2F;updates main contrib non-free&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;保存退出：&lt;code&gt;Ctrl + O&lt;&#x2F;code&gt; 保存，回车确认，&lt;code&gt;Ctrl + X&lt;&#x2F;code&gt; 退出。&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;3-geng-xin-ruan-jian-lie-biao&quot;&gt;3. 更新软件列表&lt;&#x2F;h3&gt;
+&lt;pre class=&quot;giallo&quot; style=&quot;color: #F8F8F2; background-color: #282A36;&quot;&gt;&lt;code data-lang=&quot;shellscript&quot;&gt;&lt;span class=&quot;giallo-l&quot;&gt;&lt;span style=&quot;color: #50FA7B;&quot;&gt;apt&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; update&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt; -o&lt;&#x2F;span&gt;&lt;span style=&quot;color: #F1FA8C;&quot;&gt; Acquire::Check-Valid-Until=&lt;&#x2F;span&gt;&lt;span style=&quot;color: #BD93F9;&quot;&gt;false&lt;&#x2F;span&gt;&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;p&gt;归档的源没有 &lt;code&gt;Valid-Until&lt;&#x2F;code&gt; 标记，得加 &lt;code&gt;-o Acquire::Check-Valid-Until=false&lt;&#x2F;code&gt; 参数，不然会报错。&lt;&#x2F;p&gt;
+</description>
+      </item>
+    </channel>
+</rss>
